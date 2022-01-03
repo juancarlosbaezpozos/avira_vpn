@@ -1,0 +1,102 @@
+<div class="settingsView-layout">
+        <div class="settings clearfix">
+            <div id="settings-left" class="settings__left">
+                    <div class="settings__common clearfix" tabindex="1" no-mouse-outline ng-keydown="onKeyDown($event)">
+                        <div class="settings__setting-icon" ng-click="backButtonClicked()">
+                            <i class="ionicons ion-ios-arrow-back"></i>
+                        </div>
+                        <div id="settings-back" class="settings__setting-back" ng-click="backButtonClicked()">
+                            <div translate>Back</div>
+                        </div>
+                        <div class="vertical-line" />
+                    </div>
+                </div>
+            <div class="settings__common settings__header clearfix">
+                <div>{{title}}</div>
+            </div>
+            <div class="settings__header__fill">
+                <div id="settings-left" class="settings__left">
+                    <div class="settings__common clearfix">
+                        <div class="settings__setting-icon">
+                            <i class="ionicons ion-ios-arrow-back"></i>
+                        </div>
+                        <div id="settings-back" class="settings__setting-back">
+                            <div translate>Back</div>
+                        </div>
+                        <div class="vertical-line" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="settingsView-layout__features" >
+            <form id="login-form" name="loginForm" style="height: 100%; display: table; width: 100%">
+                <div id="login-panel" class="login" ng-hide="isTfaEnabled || isAccountBlocked">
+                    <div class="input-group" ng-class="{'input-group__error' : email_error !== ''}">
+                        <div class="input-group__box">
+                            <input class="input input-group__field" name="email" type="email" ng-model="email" value="" placeholder="{{emailPlaceholder}}"
+                                maxlength=200 required />
+                            <div class="input-group__error__message" ng-show="email_error !== ''">{{email_error}}</div>
+                        </div>
+                    </div>
+                    <div class="input-group" ng-class="{'input-group__error' : password_error !== ''}">
+                        <div class="input-group__box">
+                            <input class="input input-group__field" name="password" maxlength=200 ng-attr-type="{{ 'password' }}" ng-model="password"
+                                value="" placeholder="{{passwordPlaceholder}}" required />
+                            <div class="input-group__error__message" ng-show="password_error !== ''">{{password_error}}</div>
+                            <div class="forgotPassword" ng-show="isLogin === true" ng-click="forgotPassword()" translate>Forgot your password?</div>
+                        </div>
+                    </div>
+    
+                    <div class="input-group">
+                        <div class="buttonBox">
+                            <button class="button button--full mbs " click-out="hidePopup()" ng-click="login()" translate>Continue</button>
+                        </div>
+                    </div>
+    
+                    <div class="toggle">
+                        <div class="toggle__box">
+                            <div>{{question}}</div>
+                            <div class="toggle__link" ng-click="toggle()">{{toggleAction}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="registerEula" ng-hide="isTfaEnabled || isAccountBlocked || isLogin === true">
+                    <div class="registerEula__text" translate>By proceeding, you are confirming that you have read and accepted the <a href='#' ng-click="openEula()">End User License Agreement (EULA)</a>, the <a href='#' ng-click="openTermsAndConditions()">Terms and Conditions</a> and our <a href='#' ng-click="openPrivacyAndPolicy()">Privacy Policy</a>.</div>
+                </div>
+                <div id="login-panel" class="login" ng-show="isTfaEnabled">
+                    <div class="verificationCode">
+                        <div class="verificationCode__text" translate>We sent a verification code to your phone number</div>
+                    </div>
+                    <div class="input-group" ng-class="{'input-group__error' : tfa_error !== ''}">
+                        <div class="input-group__box">
+                            <input class="input input-group__field" style="padding-left: 10px;" name="otf" ng-model="otf" value="" placeholder="{{codePlaceholder}}"
+                                maxlength=200 ng-required="isTfaEnabled" />
+                            <div class="input-group__error__message" ng-show="tfa_error !== ''">{{tfa_error}}</div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="buttonBox">
+                            <button class="button button--full mbs " click-out="hidePopup()" ng-click="loginWithOtp()">{{tfa_button}}</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="login-panel" class="login" ng-show="isAccountBlocked">
+                    <div class="accountBlocked">
+                        <div class="accountBlocked__box accountBlocked__description" translate>For security reasons your account has been blocked. Please access Avira Connect to unblock it.</div>
+                    </div>
+                    <div class="input-group">
+                        <div class="buttonBox">
+                            <button class="button button--full mbs " ng-click="accessConnect()" translate>Access</button>
+                        </div>
+                    </div>
+                    <div class="accountBlocked">
+                        <div class="accountBlocked__box">
+                            <div class="accountBlocked__newUser" translate>New to Avira?</div>
+                            <div class="toggle__link" ng-click="toggle()">{{toggleAction}}</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

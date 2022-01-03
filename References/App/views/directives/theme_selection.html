@@ -1,0 +1,83 @@
+<div style="height: 100%;">
+        <div style="height:9%;"></div>
+        <div style="height:64%;">
+            <div class="theme-selection__title">
+                <span translate>Choose your color theme</span>
+            </div>
+            <div class="theme-selection__options" style="display: table; width:100%;">
+                <div style="display:table-row;width:100%;">
+                    
+                    <div class="theme-selection__options__light">
+                        <div style="display: table; float: right;">
+                            <div style="display: table-row;">
+                                <div>
+                                    <div ng-class="{'theme-selection__options__selected': selectedTheme === 'LightTheme'}" class= "theme-selection__options__image">
+                                        <img draggable="false" src="images/png/theme-light-thumbnail.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: table-row;">
+                                <div class="theme-selection__options__radio" style="display: table-cell;">
+                                    <label class="radioContainer">
+                                        <input type="radio" name="themeRadio" ng-checked="defaultTheme === 'LightTheme'" value="LightTheme" id="selectedThemeId">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="theme-selection__options__radio__text">
+                                        <span translate>Light</span>
+                                    </div>
+                                    <div ng-show="defaultTheme === 'LightTheme'" class="theme-selection__options__radio__subtext">
+                                        <span>(</span><span translate>default</span><span>)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="theme-selection__options__dark">
+                        <div style="display: table; float: left;">
+                            <div style="display: table-row;">
+                                <div>
+                                    <div ng-class="{'theme-selection__options__selected': selectedTheme === 'DarkTheme'}" class= "theme-selection__options__image">
+                                        <img draggable="false" src="images/png/theme-dark-thumbnail.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: table-row;">
+                                <div class="theme-selection__options__radio" style="display: table-cell;">
+                                    <label class="radioContainer">
+                                        <input type="radio" name="themeRadio" ng-checked="defaultTheme === 'DarkTheme'" value="DarkTheme" id="selectedThemeId">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="theme-selection__options__radio__text">
+                                        <span translate>Dark</span>
+                                    </div>
+                                    <div ng-show="defaultTheme === 'DarkTheme'" class="theme-selection__options__radio__subtext">
+                                        <span>(</span><span translate>default</span><span>)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="theme-selection__description">
+                <span translate>The app's color theme will use the operating system setting unless you choose a different theme.</span>
+            </div>
+        </div>
+        <div style="height:7%;"></div>
+        <div style="height:20%; vertical-align: bottom;">
+            <div>
+                <div class="round-button">
+                    <div class="round-button-circle">
+                        <a href="#" ng-click="getStarted()" draggable="false" translate>Get started</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="theme-selection__cta2">
+                <a href="#" ng-click="changeLater()" draggable="false" translate>Change later in Settings</a>
+            </div>
+        </div>
+    </div>
+    

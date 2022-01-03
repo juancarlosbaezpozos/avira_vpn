@@ -1,0 +1,23 @@
+<div id="rateModalId" class="Modal is-hidden is-visuallyHidden" ng-style="{'width':frameWidth + 'px', 'height':frameHeight + 'px'}">
+        <div class="Modal-content" ng-style="{'margin-top':marginTop + 'px'}">
+        <div class="rate">
+            <div class="rate__title" translate>Rate Avira Phantom VPN</div>
+            <div class="rate__description" translate>Your internet connection was protected from prying eyes. Is this worth 5 stars?</div>
+            <div class="rate__starsContainer">
+                <img ng-src="images/png/Star.png" draggable="false" style="margin-right: 3px"/>
+                <img ng-src="images/png/Star.png" draggable="false" style="margin-right: 3px"/>
+                <img ng-src="images/png/Star.png" draggable="false" style="margin-right: 3px"/>
+                <img ng-src="images/png/Star.png" draggable="false" style="margin-right: 3px"/>
+                <img ng-src="images/png/Star.png" draggable="false" />
+            </div>
+            <div class="rate__footer">
+                <div class="rate__buttonContainer">
+                    <div class="rateButton" ng-click="rate(true)" translate>Rate 5 stars</div>
+                </div>
+                <div class="rate__buttonContainer">
+                    <div class="rate__notNow" ng-click="rate(false)" translate>Not now</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

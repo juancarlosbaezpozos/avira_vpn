@@ -1,0 +1,29 @@
+<div class="keychain">
+    <div class="keychain__title" translate>Securing your connection</div>
+    <div class="keychain__body">
+        <div class="keychain__body__imgDialog">
+            <img ng-src="images/png/neagentDialog.png" draggable="false" />
+        </div>
+        <img class="keychain__body__imgMagnifier" ng-src="images/png/neagentDialogMagnifier.png" draggable="false" />
+        <div class="keychain__body__alwaysAllow" ng-style="{'left':alwaysAllowLeft + 'px', 'font-size':alwaysAllowTextSize + 'px', 'height':textDivHeight + 'px'}">{{allwaysAllowText}}</div>
+        <div class="keychain__body__description" id="keychainDescriptionId">
+            <p translate>To encrypt your internet connection, Phantom VPN uses the neagent system service. It needs your permission to access the Keychain.</p>
+            <div ng-hide="hideEmptyLine"><br/></div>
+            <p translate>Enter your Mac password and choose <span class="privacyDescription__text__bold">Always allow</span> in the next window to continue.</p>
+        </div>
+    </div>
+    <div class="keychain__footer">
+        <div class="keychain__footer__container">
+            <div class="keychain__footer__button" ng-click="secureConnection()" translate>Okay</div>
+        </div>
+        <div class="keychain__footer__container" style="margin-top: 10px;">
+            <div class="keychain__footer__checkbox">
+                <label class="checkBoxContainer">
+                        <input type="checkbox" id="keychainDontShowId">
+                        <span class="checkBoxCheckmark"></span>
+                </label>
+            </div>
+            <div style="display: inline-block; padding-left: 10px;" translate>Don't show this again</div>
+        </div>
+    </div>
+</div>

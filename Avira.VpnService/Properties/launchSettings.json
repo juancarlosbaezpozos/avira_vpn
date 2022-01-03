@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Avira.VpnService": {
+      "commandName": "Project",
+      "commandLineArgs": "/console"
+    }
+  }
+}

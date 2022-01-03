@@ -1,0 +1,54 @@
+<div class="settingsView-layout">
+    <div style="display: table;text-align:center;width:100%;line-height:25px;font-size:18px;">
+        <div style="display:table-row;width:100%;padding-top: 5px">
+            <div style="display:table-cell;width:10%"></div>
+            <div class="diagnostic_data__collect__question emphasized" style="display: table-cell; width:80%; max-width: 535px;padding-left: 5px; padding-top: 32px; text-align: left;" translate>
+                What kind of issue do you want to report?
+            </div>
+            <div style="display:table-cell;width:10%"></div>
+        </div>
+        <div style="display:table-row">
+            <div style="display:table-cell;width:10%"></div>
+            <div style="display:table-cell; padding-top: 12px;">
+                <div class="diagnostic_data__collect__data">
+                        <ul class="unstyled">
+                            <li style="margin-bottom: 3px;">
+                                <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" ng-model="connectionIssueChecked">
+                                <label for="styled-checkbox-1"></label>
+                                <span class="diagnostic_data__collect__data__text emphasized" translate>Connection problem</span>
+                            </li>
+                            <li style="margin-bottom: 3px;">
+                                <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" ng-model="speedIssueChecked">
+                                <label for="styled-checkbox-2"></label>
+                                <span class="diagnostic_data__collect__data__text emphasized" translate>Speed issue</span>
+                            </li>
+                            <li style="margin-bottom: 3px;">
+                                <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" ng-model="licenseIssueChecked">
+                                <label for="styled-checkbox-3"></label>
+                                <span class="diagnostic_data__collect__data__text emphasized" translate>Licensing issue</span>
+                            </li>
+                            <li style="margin-bottom: 3px;">
+                                <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" ng-model="otherIssueChecked">
+                                <label for="styled-checkbox-4"></label>
+                                <span class="diagnostic_data__collect__data__text emphasized" translate>Other</span>
+                            </li>
+                        </ul>
+                </div>
+                <div style="margin-top: 10px; padding-left:25px; text-align: left">
+                    <textarea ng-model="description" ng-change="descriptionUpdated()" ng-maxlength="256"></textarea>
+                </div>
+            </div>
+            <div style="display:table-cell;width:10%"> </div>
+        </div>
+        <div style="display:table-row">
+            <div style="display:table-cell;width:10%"> </div>
+            <div style="display:table-cell;padding-top:25px">
+                <div class="{{isOptionSelected() ? 'round-button' : 'round-button-disabled'}}">
+                    <div class="{{isOptionSelected() ? 'round-button-circle' : 'round-button-circle-disabled'}}">
+                        <a href="#" ng-click="next()" draggable="false" translate>Next</a>
+                    </div>
+                </div>
+            </div>
+            <div style="display:table-cell;width:10%"> </div>
+        </div>
+    </div>

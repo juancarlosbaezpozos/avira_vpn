@@ -1,0 +1,164 @@
+﻿@font-face {
+    font-family: 'font-icons';
+    src: url('avira-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kievit Light';
+    src: url("Kievit-Light.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'KievitCompPro';
+    src: url("KievitCompPro.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'KievitCompPro-Light';
+    src: url("KievitCompPro-Light.woff") format('woff');
+}
+
+
+body {
+    font-family: "Kievit Light";
+    font-size: 14px;
+    border: 1px solid #707070;
+    background-color: white;
+    color: #8696a0;
+    display: block;
+    width: 290px;
+    height: 420px;
+    padding: 3px;
+    margin: 0px;
+}
+
+.center-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.top-cell {
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+.bottom-cell {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.title {
+    user-select: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.message.title-big {
+    font-size: 24px;
+    text-align: center;
+}
+
+.caption {
+    line-height: 1.2;
+    user-select: none;
+    font-size: 25px;
+    user-select: none;
+    font-weight: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.message {
+    line-height: 1.2;
+    user-select: none;
+    font-size: 18px;
+    user-select: none;
+    font-weight: normal;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.default-action {
+    cursor: pointer;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #23be04;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.non-default-action {
+    cursor: pointer;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    color: #8696a0;
+    font-size: 18px;
+}
+
+.second-action {
+    padding-top: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.hint {
+    padding-bottom: 10px;
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 15px;
+}
+
+.icon {
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.font_icon {
+    font-family: "font-icons";
+    padding: 5px;
+    float: right;
+    font-size: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.icon-close:after {
+    content: '\E023';
+}

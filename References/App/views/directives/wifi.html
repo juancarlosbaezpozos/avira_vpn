@@ -1,0 +1,39 @@
+<div class="settingsView-layout">
+    <div class="settingsView-layout__features">
+        <div class="settingsView-layout__features__middle">
+            <div class="nowifitext" ng-show="wifis.length == 0" translate>No Wi-Fi network saved yet for automatic VPN connection. Once saved, they will automatically appear here and can be configured.</div>
+            <div class="nano" ng-hide="wifis.length == 0">
+                <div class="nano-content">
+                    <div class="wifiNano" no-mouse-outline ng-repeat="wifi in wifis">
+                        <div class="wifi-switch">
+                            <div id="wificlose" class="wifiicon">
+                                <div class="wifi-switch__box">
+                                    <div class="wifi-switch__button">
+                                        <a href="#" draggable="false" ng-click="deleteWifi(wifi)">
+                                            <small>
+                                                <i class="ionicons ion-ios-close"></i>
+                                            </small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wifi-switch__logo">
+                                <div class="wifi-switch__box">
+                                    <div class="wifi-switch__button">
+                                        <div ng-class="{'wifi-icon-connected': wifi.Connected, 'wifi-icon-disconnected': !wifi.Connected}" draggable="false" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wifi-switch__text" ng-class="{wificonnected: wifi.Connected}">{{ wifi['Ssid'] }}</div>
+                            <div class="wifi-switch__button">
+                                <div switch="" class="wifi-switch__image green" ng-model="wifi.Autoconnect" ng-change="updateWifis(wifi)" no-mouse-outline
+                                    tabindex="10"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div id="dataUsagePopupModalId" class="ModalDataUsagePopup is-hidden is-visuallyHidden" ng-style="{'width':frameWidth + 'px', 'height':frameHeight + 'px'}">
+    <div class="ModalDataUsagePopup-content" ng-style="{'margin-top':marginTop + 'px'}">
+        <div class="dataUsagePopup">
+            <div class="noselect" style="width:100%;max-width:inherit;height:138px;text-align:center;">
+                <img class="img-stars" src="images/png/three-blue-stars.png" width="141" height="75">
+                <!-- progress ring -->
+                <svg height="100" width="100" class="circle-progress" viewBox="0 0 32 32">
+                    <circle id="progressring" class="outer-circle" r="16" cx="16" cy="16" ng-style="progressCircle" />
+                    <circle id="filled-inside" class="inner-circle" r="15.2" cx="15.9" cy="16" />
+                </svg>
+                <div class="progress-percentage-text">
+                    <span class="message number-percentage">{{progressValue}}</span>
+                    <span class="sign-percentage">%</span>
+                </div>
+            </div>
+            <div class="noselect" style="height:34px">
+                <div id="title" class="message center-cell noselect dataUsagePopup-title" translate>
+                    Your data usage
+                </div>
+            </div>
+            <div class="noselect">
+                <div style="display:block" class="center-cell noselect">
+                    <div class="noselect line-separator" draggable="false"></div>
+                </div>
+            </div>
+            <div>
+                <div class="message message-text center-cell noselect">
+                    <span class="emphasis"><span id="trafficused">{{dataUsed}} </span></span> <span translate>of traffic used.</span><div class="message-text-split"></div>
+                    <span class="emphasis"><span id="trafficremaining">{{dataRemaining}} </span></span><span translate>remaining this month.</span>
+                </div>
+            </div>
+            <div class="message message-cta" translate>Get unlimited data volume now.</div>
+
+            <div class="cta__box">
+                <div class="round-button connect-button">
+                    <div class="upgrade-to-pro round-button-circle connect-button-circle data-usage-button" ng-hide="isButtonHidden()">
+                        <a id="toggle-connect" href="#" ng-click="getProButtonClicked()" draggable="false" translate>Get Pro</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display:table-row;height:30px">
+                <div class="message-text message-not-now" ng-click="notNowClicked()" translate>Not now</div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.Messaging", "Avira.Messaging\Avira.Messaging.csproj", "{66AF1AE3-5C02-4A5B-A644-BDCF5BAB8BAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.Acp.Common", "Avira.Acp.Common\Avira.Acp.Common.csproj", "{3A303A69-1A30-45E7-9B10-9D596642BE4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vpn.shared.core", "Vpn.Shared.Core\vpn.shared.core.csproj", "{679DA9DE-2898-4173-A13A-14D9A2E66222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging", "Messaging\Messaging.csproj", "{131B27E0-1550-42B3-9DEE-635A5144501A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VPN.Core", "VPN.Core\VPN.Core.csproj", "{61D13D86-B01B-46F1-B581-0A3A5722E70A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.Acp", "Avira.Acp\Avira.Acp.csproj", "{48778407-2C23-4051-B8AC-D2D44463CF64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.Acp.Resources", "Avira.Acp.Resources\Avira.Acp.Resources.csproj", "{C7C8BD85-1682-4A8A-AEF8-9F92D2ED5DA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.Common.Core", "Avira.Common.Core\Avira.Common.Core.csproj", "{1899D554-5D74-4F74-9057-1EAEF3FAC18E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.Common.Acp.AppClient", "Avira.Common.Acp.AppClient\Avira.Common.Acp.AppClient.csproj", "{6A683DAD-42A0-4A18-84A9-423DA0B89047}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPN.Shared.WIN", "VPN.Shared\VPN.Shared.WIN.csproj", "{B7B4F72E-1A59-4273-BF51-663D238CEA78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.VPN.Core", "Avira.VPN.Core\Avira.VPN.Core.csproj", "{00877989-2657-41C4-AC4A-563F5DEF31C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.VPN.NotifierClient", "Avira.VPN.NotifierClient\Avira.VPN.NotifierClient.csproj", "{6FE2450A-6AF2-4375-9453-5E76A6478679}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.VPN.Acp", "Avira.VPN.Acp\Avira.VPN.Acp.csproj", "{138F07CD-67B6-4C8E-8B40-4DC9AF4C355D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.VPN.OeConnector", "Avira.VPN.OeConnector\Avira.VPN.OeConnector.csproj", "{A0C461D1-9943-406E-8E87-4CA7D59FE1A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.WebAppHost", "Avira.WebAppHost\Avira.WebAppHost.csproj", "{184415F3-90D7-47E1-B913-E3BFC0D0A7F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.VPN.Notifier", "Avira.VPN.Notifier\Avira.VPN.Notifier.csproj", "{32B77BA9-E745-42B9-ACCE-957FC3D731D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avira.VpnService", "Avira.VpnService\Avira.VpnService.csproj", "{12CC26B2-4E28-45DC-A5BF-0AEC33759173}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66AF1AE3-5C02-4A5B-A644-BDCF5BAB8BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AF1AE3-5C02-4A5B-A644-BDCF5BAB8BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AF1AE3-5C02-4A5B-A644-BDCF5BAB8BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AF1AE3-5C02-4A5B-A644-BDCF5BAB8BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A303A69-1A30-45E7-9B10-9D596642BE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A303A69-1A30-45E7-9B10-9D596642BE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A303A69-1A30-45E7-9B10-9D596642BE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A303A69-1A30-45E7-9B10-9D596642BE4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679DA9DE-2898-4173-A13A-14D9A2E66222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679DA9DE-2898-4173-A13A-14D9A2E66222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679DA9DE-2898-4173-A13A-14D9A2E66222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679DA9DE-2898-4173-A13A-14D9A2E66222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131B27E0-1550-42B3-9DEE-635A5144501A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131B27E0-1550-42B3-9DEE-635A5144501A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131B27E0-1550-42B3-9DEE-635A5144501A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131B27E0-1550-42B3-9DEE-635A5144501A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61D13D86-B01B-46F1-B581-0A3A5722E70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D13D86-B01B-46F1-B581-0A3A5722E70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D13D86-B01B-46F1-B581-0A3A5722E70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D13D86-B01B-46F1-B581-0A3A5722E70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48778407-2C23-4051-B8AC-D2D44463CF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48778407-2C23-4051-B8AC-D2D44463CF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48778407-2C23-4051-B8AC-D2D44463CF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48778407-2C23-4051-B8AC-D2D44463CF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C8BD85-1682-4A8A-AEF8-9F92D2ED5DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C8BD85-1682-4A8A-AEF8-9F92D2ED5DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C8BD85-1682-4A8A-AEF8-9F92D2ED5DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C8BD85-1682-4A8A-AEF8-9F92D2ED5DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1899D554-5D74-4F74-9057-1EAEF3FAC18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1899D554-5D74-4F74-9057-1EAEF3FAC18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1899D554-5D74-4F74-9057-1EAEF3FAC18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1899D554-5D74-4F74-9057-1EAEF3FAC18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A683DAD-42A0-4A18-84A9-423DA0B89047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A683DAD-42A0-4A18-84A9-423DA0B89047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A683DAD-42A0-4A18-84A9-423DA0B89047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A683DAD-42A0-4A18-84A9-423DA0B89047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B4F72E-1A59-4273-BF51-663D238CEA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B4F72E-1A59-4273-BF51-663D238CEA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B4F72E-1A59-4273-BF51-663D238CEA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B4F72E-1A59-4273-BF51-663D238CEA78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00877989-2657-41C4-AC4A-563F5DEF31C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00877989-2657-41C4-AC4A-563F5DEF31C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00877989-2657-41C4-AC4A-563F5DEF31C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00877989-2657-41C4-AC4A-563F5DEF31C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE2450A-6AF2-4375-9453-5E76A6478679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE2450A-6AF2-4375-9453-5E76A6478679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE2450A-6AF2-4375-9453-5E76A6478679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE2450A-6AF2-4375-9453-5E76A6478679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{138F07CD-67B6-4C8E-8B40-4DC9AF4C355D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{138F07CD-67B6-4C8E-8B40-4DC9AF4C355D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{138F07CD-67B6-4C8E-8B40-4DC9AF4C355D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{138F07CD-67B6-4C8E-8B40-4DC9AF4C355D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C461D1-9943-406E-8E87-4CA7D59FE1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C461D1-9943-406E-8E87-4CA7D59FE1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C461D1-9943-406E-8E87-4CA7D59FE1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C461D1-9943-406E-8E87-4CA7D59FE1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184415F3-90D7-47E1-B913-E3BFC0D0A7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184415F3-90D7-47E1-B913-E3BFC0D0A7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184415F3-90D7-47E1-B913-E3BFC0D0A7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184415F3-90D7-47E1-B913-E3BFC0D0A7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B77BA9-E745-42B9-ACCE-957FC3D731D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B77BA9-E745-42B9-ACCE-957FC3D731D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B77BA9-E745-42B9-ACCE-957FC3D731D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B77BA9-E745-42B9-ACCE-957FC3D731D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CC26B2-4E28-45DC-A5BF-0AEC33759173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CC26B2-4E28-45DC-A5BF-0AEC33759173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CC26B2-4E28-45DC-A5BF-0AEC33759173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CC26B2-4E28-45DC-A5BF-0AEC33759173}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BBBA520-9986-42A8-BB6A-9587332EBCB9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="UnblockTraffic"><value>Unblock internet traffic</value></data>
+  <data name="FtuPageTravelCheckbox"><value>Yes, I need this.</value></data>
+  <data name="FtuTrialAction"><value>Register</value></data>
+  <data name="UpdateHint"><value>Check out your new features.</value></data>
+  <data name="ConnectedToUnsecureWifiNetworkStatus"><value>You just connected to an unsecure network.</value></data>
+  <data name="Congratulations"><value>Congratulations!</value></data>
+  <data name="FtuPagePrivacyHeader"><value>Online privacy</value></data>
+  <data name="EducationMessageTravelerTitle"><value>Are you a traveller?</value></data>
+  <data name="NotNow"><value>Not now</value></data>
+  <data name="EducationMessageOnlinePrivacyHint"><value>Stop using the internet :(</value></data>
+  <data name="KillSwitchMessage"><value>Per your request, to maintain anonymity, your internet traffic was blocked because the VPN connection dropped.</value></data>
+  <data name="OpenVpnAction"><value>Open my VPN</value></data>
+  <data name="EducationMessageOnlinePrivacyMessage"><value>From banking to shopping, and communication to navigation.
+The apps and websites we are using use, store and transmit vast swathes of our personal infirmation.</value></data>
+  <data name="WelcomeMessage"><value>Congratulations. VPN is up and running. You can surf safely and anonymously by turning on your VPN.</value></data>
+  <data name="ProductFeedbackMessage"><value>Tell us how we can improve the product.</value></data>
+  <data name="UserInactivityMessage"><value>Don’t forget to protect your privacy by turning on your Avira Phantom VPN.</value></data>
+  <data name="FtuPageTravelText"><value>Be anywhere. Your access to any content is guaranteed by Avira Phantom VPN.</value></data>
+  <data name="EducationMessageWifiHint"><value>Stop using the internet :(</value></data>
+  <data name="EducationMessageWifiQuestion"><value>What can you do?</value></data>
+  <data name="TurnOn"><value>Connect</value></data>
+  <data name="Connecting"><value>Connecting ...</value></data>
+  <data name="TrafficLimitReached"><value>Secure-traffic limit reached. Your VPN will disconnect in {0} seconds.</value></data>
+  <data name="UpgradeHint"><value>Check out your premium features.</value></data>
+  <data name="EducationMessageOnlinePrivacyTitle"><value>Are you worried about your online privacy?</value></data>
+  <data name="Traffic50PercentReached"><value>You’ve gone through half of your secure traffic for this month.</value></data>
+  <data name="EducationMessageOnlinePrivacyQuestion"><value>What can you do?</value></data>
+  <data name="SecureMyConnection"><value>Secure my connection</value></data>
+  <data name="Activate"><value>Activate</value></data>
+  <data name="UpgradeMessage"><value>You were successfully upgraded to Phantom VPN Pro.</value></data>
+  <data name="FtuPageWifiCheckbox"><value>Yes, it’s a must have.</value></data>
+  <data name="EducationMessageTravelerMessage"><value>Change virtual location with VPN.
+This lets you browse from anywhere in the world as if you are in a different country, enabling you to access geo-restricted content.
+This comes with plus a whole host of privacy and security features that you will wonder how you lived without.</value></data>
+  <data name="TrafficXPercentReached"><value>You’ve used over {0}% of your secure traffic for this month.</value></data>
+  <data name="FtuTrialMessage"><value>To try the best experience, we will give you unlimited data volume for 30 days for free.</value></data>
+  <data name="UpdateMessage"><value>Your Phantom VPN was successfully updated.</value></data>
+  <data name="EducationMessageTravelerBaloon"><value>Are you frequently travelling? Do you want to know how Phantom VPN can protect you?</value></data>
+  <data name="FtuPagePrivacyCheckbox"><value>Yes, important for me.</value></data>
+  <data name="EducationMessageWifiTitle2"><value>Phantom VPN minimizes the risks of unencrypted online activity</value></data>
+  <data name="EducationMessageTravelerButton"><value>Learn how Phantom VPN protects you</value></data>
+  <data name="EducationMessageWifiMessage"><value>While free availability of WiFis is a wonderful thing, you absolutemy should be highly security conscious if oyu are going to use it for anything but the most trivial web surfing. These public hotspots are often open networks and are therefore completely unencrypted.</value></data>
+  <data name="ConnectedToUnknownWifiNetworkStatus"><value>You just connected to a potentially unsecure network.</value></data>
+  <data name="Buy"><value>Buy unlimited traffic</value></data>
+  <data name="GeneralFeedbackAction"><value>Send feedback</value></data>
+  <data name="Disconnect"><value>Disconnect</value></data>
+  <data name="Hello"><value>Hello</value></data>
+  <data name="TrustWifiNetwork"><value>No, I trust this network</value></data>
+  <data name="EducationMessageWifiTitle"><value>Are you frequently on the go and use public WiFis?</value></data>
+  <data name="FtuPageWifiButton"><value>Let’s go!</value></data>
+  <data name="FtuTrialTitle"><value>Register to get your free trial</value></data>
+  <data name="EducationMessageOnlinePrivacyBaloon"><value>Are you worried about your online privacy? Do you want to know how Phantom VPN can protect you?</value></data>
+  <data name="EducationMessageTravelerTitle2"><value>Get access to internet content not available in your country.</value></data>
+  <data name="LearnMore"><value>Learn more</value></data>
+  <data name="EducationMessageOnlinePrivacyButton"><value>Learn how Phantom VPN protects you</value></data>
+  <data name="FtuPageWifiHeader"><value>Public WiFi</value></data>
+  <data name="EducationMessageOnlinePrivacyTitle2"><value>We do increasingly more online.</value></data>
+  <data name="FtuPageNext"><value>Next</value></data>
+  <data name="Disconnecting"><value>Disconnecting ...</value></data>
+  <data name="RemindMeLater"><value>Remind me later</value></data>
+  <data name="EducationMessageWifiButton"><value>Learn how Phantom VPN protects you</value></data>
+  <data name="EducationMessageWifiBaloon"><value>Are you frequently on the go and use public WiFis? Do you want to know how Phantom VPN can protect you?</value></data>
+  <data name="FtuPagePrivacyText"><value>We secure all your activities like banking, communication, shopping, navigation...</value></data>
+  <data name="ProductFeedbackAction"><value>Rate functionality</value></data>
+  <data name="StatusDisconnected"><value>Disconnected. Connect to secure your private data</value></data>
+  <data name="ProductFeedbackHint"><value>Your feedback helps us set priorities.</value></data>
+  <data name="EducationWifiTitle"><value>Are you frequently on the go and use public WiFi?</value></data>
+  <data name="GeneralFeedbackMessage"><value>Tell us what you think.</value></data>
+  <data name="Reconnect"><value>Reconnect</value></data>
+  <data name="ConnectedToUnsecureWifiNetworkAdvice"><value>Auto-connect VPN to stay protected every time you use this Wi-Fi network.</value></data>
+  <data name="FtuPageTravelHeader"><value>Traveling</value></data>
+  <data name="FtuPageWifiText"><value>Avira Phatnom VPN covers your back by using industry leader encryption to secure all your trafic.</value></data>
+  <data name="EducationMessageTravelerQuestion"><value>What can you do?</value></data>
+  <data name="EducationMessageTravelerHint"><value>Stop using the internet :(</value></data>
+  <data name="WifiAutoConnect"><value>Phantom VPN is on. The network {0} is now safe to use.</value></data>
+  <data name="GeneralFeedbackHint"><value>Send us your feedback to improve our user experience.</value></data>
+  <data name="StatusConnected"><value>Active: virtual location set to {0}</value></data>
+  </root>

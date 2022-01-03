@@ -1,0 +1,17 @@
+<div class="location">
+    <hr>
+    <!--<div class="location__license_expiration">
+        <div bind-html-unsafe="renewalText"></div>
+        <div class="renew-button">
+            <div class="renew-button-circle">
+                <a id="renew-license" href="#" ng-click="upgradeButtonClicked()" draggable="false" style="color: white; text-decoration: none;">{{renewalButtonText}}</a>
+            </div>
+        </div>
+     </div>-->
+    <div class="location__privacy_message">{{privacyText|translate}}</div>
+    <div class="location__connecting_location">{{connectingLocation|translate}}</div>
+    <div class="location__location_message">
+        {{locationText|translate}}
+        <a href="" id="location-link" ng-click="choseLocation()" draggable="false">{{infoLink|translate}}</a>
+    </div>
+</div>

@@ -1,0 +1,217 @@
+<div class="settingsView-layout__features">
+    <div class="settingsView-layout__features__wide">
+        <div class="features__page">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="features__container">
+                        <div class="features">
+
+                            <div class="settings-switch">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <span translate>Select virtual location</span>
+                                    </div>
+                                    <div class="regions__settingSelection">
+                                        <div class="regions__settingSelection__group" ng-click="countryButtonClicked()">
+                                            <div class="location__icon">
+                                                <img ng-src="images/png/regions/{{region.iconId}}.png"
+                                                    draggable="false" />
+                                            </div>
+                                            <div class="location__text">{{region.name}}</div>
+                                            <div class="settings-switch__arrow">
+                                                <div class="wifi__setting-icon">
+                                                    <i class="ionicons ion-ios-arrow-forward"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.wifiManagement">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <span translate>Auto-connect VPN for Wi-Fi networks</span>
+                                    </div>
+                                    <div class="settings-switch__arrow" ng-click="wifiButtonClicked()">
+                                        <div class="wifi__setting-icon">
+                                            <i class="ionicons ion-ios-arrow-forward"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.autoConnectUnsecureWifi">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <div class="settings-switch__pro">
+                                            <div class="settings-switch__pro__text">
+                                                <span translate>Automatically secure untrusted Wi-Fi networks</span>
+                                            </div>
+                                            <div class="settings-switch__pro__badge">
+                                                <button class="proButton" id="autoConnect"
+                                                    ng-click="upgradeButtonClicked()"
+                                                    ng-class="{'proButton__hide': licenseType === 'Pro'}">
+                                                    {{proBadgeLabel}}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-switch__button">
+                                        <div switch="" class="settings-switch__image green" id="autoSecureUntrustedWifi"
+                                            ng-model="appSettings.autoSecureUntrustedWifi"
+                                            ng-change="updateProFeature('autoSecureUntrustedWifi')" no-mouse-outline
+                                            tabindex="12">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-show="showThemeSelection">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <span translate>Display settings</span>
+                                    </div>
+                                    <div class="settings-switch__arrow" ng-click="displaySettingsClicked()" id="themeSelection">
+                                        <div class="wifi__setting-icon">
+                                            <i class="ionicons ion-ios-arrow-forward"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.killSwitch">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <div class="settings-switch__pro">
+                                            <div class="settings-switch__pro__text">
+                                                <span translate>Block all internet traffic if VPN connection drops</span>
+                                            </div>
+                                            <div class="settings-switch__pro__badge">
+                                                <button class="proButton" id="proKill" ng-click="upgradeButtonClicked()"
+                                                    ng-class="{'proButton__hide': licenseType === 'Pro'}">
+                                                    {{proBadgeLabel}}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-switch__button">
+                                        <div switch="" class="settings-switch__image green" id="killSwitch"
+                                            data-kill-switch={{appSettings.killSwitch}}
+                                            ng-model="appSettings.killSwitch" ng-change="updateProFeature('killSwitch')"
+                                            no-mouse-outline tabindex="13">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.malwareProtection.enabled">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <div class="settings-switch__beta">
+                                            <div class="settings-switch__beta__text">
+                                                <span translate>Block malicious sites and content</span>
+                                            </div>
+                                            <div class="settings-switch__beta__badge">
+                                                <button class="betaButton" id="betaMalware"
+                                                    ng-class="{'betaButton__hide': !features.malwareProtection.beta}">
+                                                    BETA
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-switch__button" no-mouse-outline tabindex="14">
+                                        <div switch="" class="settings-switch__image green" id="malwareProtection"
+                                            data-malware-protection={{appSettings.malwareProtection}}
+                                            ng-model="appSettings.malwareProtection" ng-change="updateSettings">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.adBlocking.enabled">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <div class="settings-switch__beta">
+                                            <div class="settings-switch__beta__text">
+                                                <span translate>Block intrusive ads</span>
+                                            </div>
+                                            <div class="settings-switch__beta__badge">
+                                                <button class="betaButton" id="betaAdBlocking"
+                                                    ng-class="{'betaButton__hide': !features.adBlocking.beta}">
+                                                    BETA
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-switch__button">
+                                        <div switch="" class="settings-switch__image green" id="adBlocking"
+                                            data-ad-blocking={{appSettings.adBlocking}}
+                                            ng-model="appSettings.adBlocking" ng-change="updateSettings"
+                                            no-mouse-outline tabindex="14">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.udpSupport">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text">
+                                        <span translate>Use fastest protocol when available</span>
+                                    </div>
+                                    <div class="settings-switch__button" no-mouse-outline tabindex="14">
+                                        <div switch="" class="settings-switch__image green" id="udpSupport"
+                                            data-udp-support={{appSettings.udpSupport}}
+                                            ng-model="appSettings.udpSupport" ng-change="updateSettings">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="features.disableLaunchAtStartup">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text" translate>Launch at system start</div>
+                                    <div class="settings-switch__button">
+                                        <div switch="" class="settings-switch__image green" id="autostart"
+                                            data-autostart={{userSettings.autoStart}} ng-model="userSettings.autoStart"
+                                            ng-change="updateSettings" no-mouse-outline tabindex="11">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-switch" ng-hide="!features.disableTracking">
+                                <div class="settings-switch__container">
+                                    <div class="settings-switch__text" translate>Send diagnostic data</div>
+                                    <div class="settings-switch__button">
+                                        <div switch="" class="settings-switch__image green" id="tracking"
+                                            data-tracking={{appSettings.appImprovement}}
+                                            ng-model="appSettings.appImprovement" ng-change="updateSettings"
+                                            no-mouse-outline tabindex="10">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about-linktext" ng-show="showAboutLink" style="margin-top: 30px;">
+                                <a href="" id="about-link" ng-click="aboutVpnClicked()" draggable="false"
+                                    translate="">About {{productName}}</a>
+                            </div>
+                            <div class="quit-linktext" ng-show="showQuitLink">
+                                <a href="" id="quit" ng-click="quit()" draggable="false" translate="">Quit</a>
+                            </div>
+                            <div class="logout-linktext" ng-show="showLogoutLink">
+                                <a href="" id="logout" ng-click="logout()" draggable="false" translate="">Logout</a>
+                            </div>
+                            <div class="round-button quit-button-container">
+                                <div class="round-button-circle quit-button" style="height:30px;" ng-show="isMacClient">
+                                    <a id="quit" href="#" ng-click="quit()" draggable="false" style="font-family: KievitCompPro; font-size: 20px; line-height: 26px;" translate>Quit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

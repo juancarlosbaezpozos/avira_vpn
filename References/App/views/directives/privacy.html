@@ -1,0 +1,33 @@
+<div class="settingsView-layout">
+    <div class="settings clearfix">
+        <div class="settings__common settings__header clearfix">
+            <div translate>Privacy is important to us</div>
+        </div>
+    </div>
+    <div class="privacyDescription">
+        <div class="nano">
+            <div class="nano-content">
+                <div id="privacyTextId" class="privacyDescription__container__wrapper">
+                    <div class="privacyDescription__container">
+                        <div class="privacyDescription__text__container">
+                            <div class="privacyDescription__text" translate>We want to be fully transparent about the data you agree to share with us. To provide you a smooth VPN experience we need a minimum set of data:</div>
+                            <div class="privacyDescription__text"><br></div>
+                            <div class="privacyDescription__text privacyDescription__text__bulletPoint" translate>Whether you are a free or a paid user. It's important for our communications to be able to differentiate the two</div>
+                            <div class="privacyDescription__text"><br></div>
+                            <div class="privacyDescription__text privacyDescription__text__bulletPoint" translate>The amount of data that you consume. We do this to help calculate the costs of providing our VPN infrastructure</div>            
+                            <div class="privacyDescription__text"><br></div>
+                            <div class="privacyDescription__text" translate><span class="privacyDescription__text__bold">We don't log your online activity or any information that can link you to any action</span>, such as downloading a file, or visiting a particular website.</div>
+                            <div class="privacyDescription__text"><br></div>
+                            <div class="privacyDescription__text" translate>By proceeding, you are accepting the <a href="#" ng-click="openEula()">End User License Agreement (EULA)</a>, and the <a href="#" ng-click="openTermsAndConditions()">Terms and Conditions</a>. Avira is fulfilling its duties to provide information in accordance with Articles 13 and 14 of the General Data Protection Regulation (GDPR) with the contents of the Privacy Policy and access thereto. You can find our Privacy Policy here: <a href="#" ng-click="openPrivacyAndPolicy()">{{getPrivacyPolicyLink()}}</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="privacyFooter">
+        <div class="privacyFooter__container">
+            <div class="privacyFooter__button" ng-click="agreeAndContinue()" translate>Agree and continue</div>
+        </div>
+    </div>
+</div>

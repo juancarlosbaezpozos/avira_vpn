@@ -1,0 +1,7 @@
+<div class="notification clearfix" 
+		ng-class="{'notification--ok': status === 1, 'notification--nok': status === -1, 'notification--connecting': status === 0}">
+	<div class="notification__icon">
+		<i class="ionicons" ng-class="{'ion-android-done': status === 1, 'ion-alert-circled': status === -1}" ></i>
+	</div>
+	<div class="notification__text">{{message|translate}}</div>
+</div>

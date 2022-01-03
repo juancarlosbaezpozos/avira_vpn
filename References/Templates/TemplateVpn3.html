@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="notifierAvira.css" />
+</head>
+<body class="noselect">
+    <div class="noselect" style="display:table;width:100px; max-width:290px;min-height: 428px">
+        <div style="display:table-row">
+            <img class="noselect" src="images/IPM-header.png" style="position:relative; margin-bottom: 7px" draggable="false" />
+            <div id="close" style="height:30px" class="font_icon icon-close noselect"></div>
+        </div>
+        <div class="icon noselect" style="display:inline-block;width:100%;max-width:inherit;height:90px;text-align:center;margin-bottom: 5px;">
+            <img class="noselect" src="images/alert-red.png" style="height:89px" draggable="false" />
+        </div>
+        <div class="noselect" style="display:table-row;height:34px">
+            <div id="title" class="message title-big center-cell noselect">
+                Unsecure WiFi Network:
+            </div>
+        </div>
+        <div style="overflow: hidden; text-overflow:ellipsis; white-space: nowrap; width: 240px" class="message">
+            <img style="height:15px; padding-right:5px; vertical-align:text-top" src="images/vpn-gray.svg" />
+            <span id="title2">
+                WiFi name is very long and has to be shorten
+            </span>
+        </div>
+        <div class="noselect" style="display:table-row;">
+            <div style="display:block" class="center-cell noselect">
+                <img class="noselect" src="images/horzLine.png" style="width:80px; height:1px; vertical-align: middle" draggable="false" />
+            </div>
+        </div>
+        <div style="display:table-row;">
+            <div id="hint" style="vertical-align: top; padding-top:5px" class="message center-cell noselect">Your data is not safe. Let VPN always create a connection for you every time you use this WiFi network to stay protected.</div>
+        </div>
+        <div class="message" style="margin-top: 15px; margin-bottom:5px">Connect with VPN:</div>
+        <div style="display:table;border-collapse:separate;border-spacing:20px 0px;width:100%; margin-bottom:15px">
+            <div style="display:table-row;height:40px">
+                <div id="action1" style="display: table-cell; width: 50%" class="noselect default-action" action="ActivateVpn">Always</div>
+                <div id="action2" style="display: table-cell; width: 50%; background-color: whitesmoke" class="noselect non-default-action" action="NotNow">Not now</div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</body>
+</html>

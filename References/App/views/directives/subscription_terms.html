@@ -1,0 +1,53 @@
+<div style="height:100%;width:100%">
+    <div class="settings clearfix">
+        <div id="settings-left" class="settings__left">
+            <div class="settings__common clearfix" tabindex="1" no-mouse-outline ng-keydown="onKeyDown($event)">
+                <div class="settings__setting-icon" ng-click="backButtonClicked()">
+                    <i class="ionicons ion-ios-arrow-back"></i>
+                </div>
+                <div id="settings-back" class="settings__setting-back" ng-click="backButtonClicked()">
+                    <div translate>Back</div>
+                </div>
+                <div class="vertical-line" />
+            </div>
+        </div>
+        <div class="settings__common settings__header clearfix">
+            <div>{{title}}</div>
+        </div>
+        <div class="settings__header__fill">
+            <div id="settings-left" class="settings__left">
+                <div class="settings__common clearfix">
+                    <div class="settings__setting-icon">
+                        <i class="ionicons ion-ios-arrow-back"></i>
+                    </div>
+                    <div id="settings-back" class="settings__setting-back">
+                        <div translate>Back</div>
+                    </div>
+                    <div class="vertical-line" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style = "display:table;height:100%;width:100%;font-size:15px;padding:20px;overflow-y: scroll">
+        <div style="display:table">
+        <div style="display:table-row;width:100%">
+            <div style="display: table-cell;width:100%" translate>
+                    Length of subscription: 1 month/1 year<br/><br/> 
+                    Price of subscription: 4,95€ per month (Mac only) – 7,95€ per month (all devices) – 59,95€ per year (all devices).<br/><br/>
+                    
+                    Payment will be charged to iTunes Account at confirmation of purchase. Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period. Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal. Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase. Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable.
+    </div></div>
+       
+    <div style="display: table;width:100%; padding: 20px">
+        <div style="display:table-row">
+            <div style="display:table-cell;width:50%;text-align: center;cursor: pointer;" ng-click="privacyPolicy()" translate>
+                Privacy policy
+            </div>
+            <div style="display:table-cell;width:50%; text-align: center;cursor: pointer;" ng-click="termsAndConditions()" translate>
+                Terms and conditions
+            </div>
+        </div></div>
+
+    </div>
+</div>

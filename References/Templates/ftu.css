@@ -1,0 +1,217 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col1 {
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.col2 {
+    float: right;
+    width: 60%;
+    text-align: center;
+}
+
+.content {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+body {
+    width: 720px;
+    height: 560px;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 720px;
+    height: 560px;
+    background: #F3F5F6;
+    position: relative;
+    user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+.block {
+    padding-left: 70px;
+    padding-top: 114px;
+}
+
+@font-face {
+    font-family: 'KievitCompProLight';
+    src: url("KievitCompPro-Light.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'font-icons';
+    src: url('avira-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    font-family: 'KievitCompProLight';
+    font-size: 24px;
+    color: #3A4144;
+    line-height: 36px;
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+.text {
+    font-family: 'KievitCompProLight';
+    font-size: 18px;
+    color: #6F8299;
+    line-height: 25px;
+    margin: 0px;
+}
+
+input {
+    background: #FFFFFF;
+    border: 1px solid #CFD6DC;
+    border-radius: 2px;
+}
+
+#pageImage {
+    margin-top: 69px;
+    margin-left: 1px;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+label {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #CFD6DC;
+    border-radius: 2px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.next {
+    position: absolute;
+    left: 540px;
+    top: 482px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #CFD6DC;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 3px;
+    width: 120px;
+    height: 38px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 38px;
+    cursor: pointer;
+}
+
+.next>span:hover {
+    color: #3A4144;
+}
+
+.next>span {
+    box-sizing: border-box;
+    font-family: 'KievitCompProLight';
+    font-size: 20px;
+    color: #6F8299;
+}
+
+.font_icon {
+    position: absolute;
+    font-family: "font-icons";
+    font-size: 12px;
+    color: #AAB8C2;
+    cursor: pointer;
+    left: 698px;
+    top: 8px;
+}
+
+.icon-close:after {
+    content: '\E023';
+}
+
+.circle {
+    float: left;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: #CFD6DC;
+    margin: 1px;
+}
+
+.active {
+    background: #6F8299;
+}
+
+.slider {
+    position: absolute;
+    top: 496px;
+    left: 346px;
+}
+
+.logo {
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 123px;
+}
+
+.trial-header {
+    box-sizing: border-box;
+    font-family: 'KievitCompProLight';
+    font-size: 24px;
+    color: #3A4144;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.trial-text {
+    box-sizing: border-box;
+    font-family: 'KievitCompProLight';
+    font-size: 18px;
+    color: #6F8299;
+    text-align: center;
+    margin: 0 auto;
+    width: 460px;
+    line-height: 25px;
+}
+
+.trial-button {
+    box-sizing: border-box;
+    font-family: 'KievitCompProLight';
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 61px auto 29px;
+    width: 144px;
+    height: 38px;
+    background: #23BE04;
+    border-radius: 3px;
+}
+
+.trial-not-now {
+    box-sizing: border-box;
+    font-family: 'KievitCompProLight';
+    font-size: 14px;
+    color: #6F8299;
+    text-align: center;
+    cursor: pointer;
+}

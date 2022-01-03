@@ -1,0 +1,20 @@
+<div id="regionsLockModalId" class="Modal is-hidden is-visuallyHidden" ng-style="{'width':frameWidth + 'px', 'height':frameHeight + 'px'}">
+    <div class="Modal-content" ng-style="{'margin-top':marginTop + 'px'}">
+        <div class="regionsLock">
+            <div class="regionsLock__header">
+                <div class="regionsLock__header__button">
+                    <div class="header__control">
+                        <a href="#" draggable="false" ng-click="closeClicked()"><i class="icon icon-close"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="regionsLock__container">
+                <div class="regionsLock__message" translate>To change your location, get a 7 Day FREE Trial of InvinciBull.</div>
+                <div class="regionsLock__message" translate>Not ready to upgrade? We will connect you to the nearest location.</div>
+            </div>
+            <div class="regionsLock__footer">
+                <div class="regionsLock__footer__button" ng-click="upgradeButtonClicked()" translate>UPGRADE</div>
+            </div>
+        </div>
+    </div>
+</div>

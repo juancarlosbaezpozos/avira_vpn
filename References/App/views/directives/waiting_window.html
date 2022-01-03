@@ -1,0 +1,21 @@
+<div class="waitingWindow">    
+    <div class="waitingWindow__pulsarContainer">
+        <div class="pulsar__icon__big"></div>
+        <div class="pulsar__icon">
+            <div class="pulsar__icon_img"></div>
+        </div>   
+    </div>
+    <div class="waitingWindow__connecting" translate>Connecting VPN</div>
+    <div class="waitingWindow__connecting waitingWindow__connecting__virtualLocation">{{virtualLocationText}}</div>
+
+    <div class="waitingWindow__waitingTime">
+        <p translate>All free slots are currently taken.</p>
+        <p translate>You will be connected in <a>{{secondsRemaining}}</a> seconds</p>
+    </div>
+
+    <div class="waitingWindow__question" translate>Don't want to wait? Upgrade now</div>
+    <div style="display:inline-block">
+        <div class="waitingWindow__getPro" ng-click="getPro()" translate>Get Pro</div>
+    </div>
+    <div class="waitingWindow__cancel" ng-click="cancel()" translate>Cancel</div>
+</div>

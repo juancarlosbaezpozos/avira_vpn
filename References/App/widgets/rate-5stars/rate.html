@@ -1,0 +1,59 @@
+<div id="rateModalId" class="Modal is-hidden is-visuallyHidden" ng-style="{'width':frameWidth + 'px', 'height':frameHeight + 'px'}">
+        <div class="Modal-content" ng-style="{'margin-top':marginTop + 'px', 'height' : '385px'}">
+        <div class="rate">
+            <div class="rate__title">{{rateTitleText}}</div>
+            <div class="rate__description">{{rateDescriptionText}}</div>
+            <div class="rate__starsText" ng-show="selectableStars">{{starsText}}</div>
+            <div class="rate__starsContainer" ng-style="{ 'margin-top': selectableStars ? '0px' : '32px'}" ng-mouseleave="updateSelectedStars(rating)">
+                <img ng-src="widgets/rate-5stars/images/png/{{getStarImage(1)}}.png" 
+                    ng-mouseover="updateSelectedStars(1)" 
+                    ng-mousedown="updateRating(1)"
+                    draggable="false"
+                    ng-style="{ 'cursor': selectableStars ? 'pointer' : 'default', 'margin-right': '3px' }"/>
+                <img ng-src="widgets/rate-5stars/images/png/{{getStarImage(2)}}.png" 
+                    ng-mouseover="updateSelectedStars(2)" 
+                    ng-mousedown="updateRating(2)" 
+                    draggable="false" 
+                    ng-style="{ 'cursor': selectableStars ? 'pointer' : 'default', 'margin-right': '3px' }"/>
+                <img ng-src="widgets/rate-5stars/images/png/{{getStarImage(3)}}.png" 
+                    ng-mouseover="updateSelectedStars(3)" 
+                    ng-mousedown="updateRating(3)" 
+                    draggable="false"
+                    ng-style="{ 'cursor': selectableStars ? 'pointer' : 'default', 'margin-right': '3px' }"/>
+                <img ng-src="widgets/rate-5stars/images/png/{{getStarImage(4)}}.png" 
+                    ng-mouseover="updateSelectedStars(4)" 
+                    ng-mousedown="updateRating(4)"
+                    draggable="false"
+                    ng-style="{ 'cursor': selectableStars ? 'pointer' : 'default', 'margin-right': '3px' }"/>
+                <img ng-src="widgets/rate-5stars/images/png/{{getStarImage(5)}}.png" 
+                    ng-mousedown="updateRating(5)"    
+                    ng-mouseover="updateSelectedStars(5)" 
+                    draggable="false"
+                    ng-style="{ 'cursor': selectableStars ? 'pointer' : 'default'}"/>
+            </div>
+            <div class="rate__footer">
+                <div class="rate__buttons__vertical" ng-hide="alignButtonsHorizontally">
+                    <div class="rate__buttonContainer__vertical">
+                        <div class="rateButton" ng-click="rate(true)">{{rateButtonText}}</div>
+                    </div>
+                    <div class="rate__buttonContainer__vertical">
+                        <div class="rate__notNow" ng-style="{'margin-top': '15px'}" ng-click="rate(false)">{{notNowButtonText}}</div>
+                    </div>
+                </div>
+                <div class="rate__buttons__horizontal" ng-show="alignButtonsHorizontally">
+                    <div class="rate__buttonContainer__horizontal">
+                        <div class="rate__notNow" ng-click="rate(false)">{{notNowButtonText}}</div>
+                    </div>
+                    <div class="rate__buttonContainer__horizontal">
+                        <div class="rateButton" ng-click="rate(true)">{{rateButtonText}}</div>
+                    </div>
+                </div>
+                <div class="dontShowAgain" ng-show="showDontShowAgain">
+                    <input id="dontShowAgainCheckBox" type="checkbox" ng-model="dontShowAgainChecked"/>
+                    <label id="dontShowAgainLabel" for="dontShowAgainCheckBox"></label>
+                    <span class="text" id="dontShowAgainCheckBoxText">{{dontShowAgainText}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

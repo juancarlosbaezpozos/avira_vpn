@@ -1,0 +1,45 @@
+<div class="settingsView-layout">
+    <div id="quickSearchId" class="settings__quickSearch">
+        <div class="settings clearfix">
+            <div class="settings__common settings__header clearfix" style="text-align:center">
+                <div class="settings__quickSearch__searchRectangle">
+                    <i class="settings__quickSearch__leftIcon ionicons ion-ios-search"></i>
+                    <input type="text" ng-model="query" ng-model-options="{ debounce: 200 }" ng-change="doSearch()"
+                        maxlength="256" class="settings__quickSearch__textBox">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="settingsView-layout__features">
+        <div class="settingsView-layout__features__middle" style="width:100%;">
+            <div class="nano">
+                <div class="nano-content">
+                    <div id="reg-{{region.id}}" class="regions-switch" ng-class="{'selectedItem': region.id == selectedId}"
+                        ng-click="regionSelectionClicked(region)" no-mouse-outline ng-keypress="onRegionKeyPress($event, region)"
+                        ng-keyup="onRegionKeyUp($event, region)" tabindex="10" ng-repeat="region in regions">
+                        <div class=regions-switch__container>
+                            <div class="regions-radiobutton">
+                                <span class="radiobutton" ng-class="{'checked': region.id == selectedId}">
+                                    <small></small>
+                                </span>
+                            </div>
+                            <div class="regions-flag">
+                                <img ng-src="images/png/regions/{{region.iconId}}.png" draggable="false" />
+                            </div>
+                            <div class="regions-switch__text">{{ region.name }}</div>
+                            <div class="regions-pro" ng-show="showProBadge(region)">
+                                <button class="proButton">PRO</button>
+                            </div>
+                            <div class="regions-switch__latency" ng-style="{color: 
+                            getSpeedIndictator(region) === 'fast' ? '#43BA49' : 
+                            getSpeedIndictator(region) === 'medium' ? '#FCAF28' : 
+                            getSpeedIndictator(region) === 'slow' ? '#F2392C' :                            
+                            ''}">{{region.latency}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+namespace Avira.VpnService
+{
+    public enum COMPONENT_CHARACTERISTICS
+    {
+        NCF_VIRTUAL = 1,
+        NCF_SOFTWARE_ENUMERATED = 2,
+        NCF_PHYSICAL = 4,
+        NCF_HIDDEN = 8,
+        NCF_NO_SERVICE = 0x10,
+        NCF_NOT_USER_REMOVABLE = 0x20,
+        NCF_MULTIPORT_INSTANCED_ADAPTER = 0x40,
+        NCF_HAS_UI = 0x80,
+        NCF_SINGLE_INSTANCE = 0x100,
+        NCF_FILTER = 0x400,
+        NCF_DONTEXPOSELOWER = 0x1000,
+        NCF_HIDE_BINDING = 0x2000,
+        NCF_NDIS_PROTOCOL = 0x4000,
+        NCF_FIXED_BINDING = 0x20000
+    }
+}

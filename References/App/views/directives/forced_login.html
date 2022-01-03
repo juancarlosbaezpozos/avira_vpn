@@ -1,0 +1,63 @@
+<div style="height: 100%">
+    <div id="fl-loader" ng-hide="!isLoading">
+        <div class="fl-loader-overlay">
+            <div class="fl-loader"></div>
+        </div>
+        <div class="fl-loader-overlay-text">
+            <div class="overlay-text" translate>Logging in...</div>
+        </div>
+    </div>
+    <div style="height: 100%;" ng-style="isLoading?{'background-color':'#161F25', 'opacity':'0.3', 'pointer-events':'none'}:{}">
+        <div style="height:9%;">
+            <img class="forced-login-background" draggable="false" ng-style="isLoading?{'opacity': '0.3'}:{}" src="images/png/forced-login-background.png" />
+        </div>
+        <div style="height:21%;">
+            <div class="forced-login forced-login__title">
+                <span translate>Log in</span>
+            </div>
+            <div class="forced-login forced-login__subtitle">
+                <span translate>Get all the protection you need.</span>
+            </div>
+        </div>
+        <div style="height:40%;">
+            <form name="loginForm">
+                <div class="forced-login">
+                    <div class="forced-login__input-box" ng-style="email_error==''?{}:{'border-color':'#F20202'}">
+                        <input id="login-username" class="forced-login__input-field" name="email"
+                            type="email" ng-model="email" placeholder="{{emailPlaceholder}}" maxlength=200 required />
+                    </div>
+                    <div class="forced-login__text-box">
+                        <div class="forced-login__error-text"><span>{{email_error}}</span></div>
+                    </div>
+                    <div class="forced-login__input-box" ng-style="password_error==''?{}:{'border-color':'#F20202'}">
+                        <input id="login-password" class="forced-login__input-field" name="password"
+                            maxlength="200" ng-attr-type="{{ 'password' }}" ng-model="password"
+                            placeholder="{{passwordPlaceholder}}" required />
+                    </div>
+                    <div class="forced-login__text-box">
+                        <div class="forced-login__error-text" style="margin-bottom: 0px;">
+                            <span id="password-error">{{password_error}}</span>
+                        </div>
+                    </div>
+                    <div class="forced-login__text-box">
+                        <a id="forgot-password-button" href="#" ng-click="forgotPasswordClicked()">
+                            <span class="forced-login__forgot-password-text" translate>Forgot your password?</span>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="height:20%; text-align: center; display: block;">
+            <div style="display: inline-block">
+                <div id="login-button" class="forced-login forced-login__button" ng-click="loginClicked()">
+                    <span class="forced-login__button-text" translate>Log in</span>
+                </div>
+                <div><span class="forced-login__subtitle" translate>Don't have an account yet?</span></div>
+                <div class="forced-login__subtitle">
+                    <a id="register-button" href="#" ng-click="registerClicked()" draggable="false"
+                        style="text-decoration: none; color: #3AACFC;" translate>Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

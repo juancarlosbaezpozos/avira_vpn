@@ -1,0 +1,108 @@
+﻿@font-face {
+    font-family: 'font-icons';
+    src: url('avira-icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kievit Light';
+    src: url("Kievit-Light.woff") format('woff');
+}
+
+body {
+    font-family: "Kievit Light";
+    font-size: 14px;
+    border: 0px solid #707070;
+    background-color: white;
+    color: #67737B;
+    display: block;
+    padding: 3px;
+    margin: 0px;
+    width: 1000px;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.title {
+    font-size: 35px;
+    text-align: center;    
+    padding-bottom: 15px;
+}
+
+.title2 {
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 15px; 
+}
+
+.question {
+    font-size: 18px;    
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.message {
+    font-size: 17px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 45px;
+
+}
+
+.default-action {
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #23be04;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    height: 40px;
+    width: 400px;
+    margin: 0 auto;
+    line-height: 40px;
+    font-weight: normal;
+    border: 1px solid #707070;
+}
+
+.hint {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 40px;
+}
+
+.icon {
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.font_icon {
+    font-family: "font-icons";
+    padding: 5px;
+    float: right;
+    font-size: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.icon-close:after {
+    content: '\E023';
+}
+
+.center-img {
+    display: block; 
+    margin: 0 auto;
+    padding-bottom: 10px;
+}

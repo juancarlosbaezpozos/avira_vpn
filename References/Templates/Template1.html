@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="notifier.css">
+</head>
+<body>
+    <div style="display:table;width:100%">
+        <span class="icon">
+            <img id="icon" src="images/alert.png"/>
+        </span>
+        <span style="padding: 5px; display: table-cell;vertical-align:top" class="noselect">
+            <span id="title" class="title noselect">{{title}}</span><br />
+            <span id="message" class="message noselect">{{message}}<br />second line</span>
+        </span>
+        <span id="close" class="font_icon icon-close"></span>
+    </div>
+    <div>
+        <button class="action" id="action1">{{action1}}</button>
+        <div style="clear:both"></div>
+    </div>
+</body>
+</html>

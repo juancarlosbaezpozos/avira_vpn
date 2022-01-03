@@ -1,0 +1,58 @@
+<div class="settingsView-layout">
+    <div class="settingsView-layout__features">
+        <div class="settingsView-layout__features__wide">
+            <div class="features__page">
+                <div class="nano">
+                    <div class="nano-content">
+                        <div class="features__container">
+                            <div class="features">
+
+                                <div class="settings-switch">
+                                    <div class="settings-switch__container">
+                                        <div class="settings-switch__text">
+                                            <div class="settings-switch__text__title" translate>Use system settings</div>
+                                            <div class="settings-switch__text__description" translate>The app's color theme will use the operating system setting.</div>
+                                        </div>
+                                        <div class="settings-switch__button" style="vertical-align:top; padding-top:14px;">
+                                            <div switch="" class="settings-switch__image green" id="OsSettings"
+                                                data-ossettings-theme={{display.OsSettings}}
+                                                ng-model="display.OsSettings" ng-change="updateDisplaySettings($event)"
+                                                no-mouse-outline tabindex="10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="settings-switch">
+                                    <div class="settings-switch__container">
+                                        <div class="settings-switch__text" translate>Light theme</div>
+                                        <div class="settings-switch__button">
+                                            <div switch="" class="settings-switch__image green" id="LightTheme"
+                                                data-light-theme={{display.LightTheme}}
+                                                ng-model="display.LightTheme" ng-change="updateDisplaySettings($event)"
+                                                no-mouse-outline tabindex="11">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="settings-switch">
+                                    <div class="settings-switch__container">
+                                        <div class="settings-switch__text" translate>Dark theme</div>
+                                        <div class="settings-switch__button">
+                                            <div switch="" class="settings-switch__image green" id="DarkTheme"
+                                                data-dark-theme={{display.DarkTheme}}
+                                                ng-model="display.DarkTheme" ng-change="updateDisplaySettings($event)"
+                                                no-mouse-outline tabindex="12">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

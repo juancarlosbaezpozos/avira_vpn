@@ -1,0 +1,62 @@
+<div id="header" class="header clearfix">
+    <div class="header__logo">
+        <img src="images/png/vpn.png" width="40" height="40" draggable="false" />
+        <span class="insider">Insider</span>
+    </div>
+    <div class="header__logo-mark header__showText">
+        {{BrandName}}
+        <span class="header__sublogo">{{ProductName}}</span>
+        <span id="textPro" class="header__sublogo__Pro" ng-class="{'header__sublogo__Pro__show': licenseType === 'Pro'}">{{SublogoTextPro}}</span>
+    </div>
+	<div class="header__logo_text header__showLogo">
+        <img src="images/png/logo_text.png" draggable="false"/>
+    </div>
+    <div class="header__controls">
+        <div class="header__controls__frame">
+            <div class="header__control">
+                    <div class="header__button header__button__upgrade" id="upgrade" ng-click="!headerDisabled && upgradeButtonClicked()" 
+                        ng-class="{ 'header__buttonEnabled header__buttonEnabled__upgradeEnabled': !headerDisabled,
+                                    'header__button__disabled': headerDisabled,
+                                    'header__button__upgrade__hide': licenseType === 'Pro'}">
+                            <span>{{getProText}}</span>
+                    </div>
+            </div>
+            <div class="header__control">
+                <div id="account_menu" class="header__button header__button__account" ng-click="!headerDisabled && accountButtonClicked()" 
+                    ng-class="{ 'header__buttonEnabled header__buttonEnabled__accountEnabled': !headerDisabled,
+                                'header__button__disabled': headerDisabled,
+                                'loggedin': loggedin && emailConfirmed,
+                                'withdropdown': shouldShowLogout() }"
+                    ng-show="showAccountButton()">
+                    <i id="open_account_menu_button" class="icon icon-user2 icon-with-text" ng-style="accountText!='' ? { 'padding-right': '7px' } : '' "></i>
+                    <span class="account_max_width" ng-hide="accountTextIsHidden()">{{accountText}}</span>
+                    <div class="header__button__dropdown" ng-show="shouldShowLogout()"></div>
+                </div>
+                <div id="account_menu_dropdown" class="header_menu_content header_menu_account_content" ng-class="{'header__controlHover': !headerDisabled}" ng-show="accountMenuVisible" click-out="hideAccountMenu($event, 'account_menu')">
+                    <a id="account_information" href="#" draggable="false" ng-click="userProfile()" translate>Account details</a>
+                    <a id="logout" href="#" draggable="false" ng-click="logout()" translate>Log out</a>
+                </div>
+            </div>
+            <div class="header__control header__settings" ng-class="{'header__controlHover': !headerDisabled}">
+                <a id="show-settings" href="#" draggable="false" ng-click="!headerDisabled && showSettingsClicked()">
+                    <i class="icon icon-settings" ng-class="{'header__control__disabled': headerDisabled}"></i>
+                </a>
+            </div>
+            <div id="help_menu" class="header__control header__dropdown_menu" ng-class="{'header__controlHover': !headerDisabled}" ng-show="showHelpButton()">
+                <a id="open_help_menu" href="#" draggable="false" ng-click="!headerDisabled && toggleHelpMenu()">
+                    <i id="open_help_menu_button" class="icon icon-help" ng-class="{'header__control__disabled': headerDisabled}"></i>
+                </a>
+                <div id="help_menu_dropdown" class="header_menu_content header_menu_about_content" ng-show="helpMenuVisible" click-out="hideHelpMenu($event, 'open_help_menu_button')">
+                    <a id="show_support" href="#" draggable="false" ng-click="showSupportPageClicked()" translate>Get support</a>
+                    <a id="start_diagnostic_data" href="#" draggable="false" ng-show="showDiagnosticMenuEntry()" ng-click="showStartDiagnosticData()" translate>Diagnostics</a>
+                    <a id="about_vpn" href="#" draggable="false" ng-hide="hideAbout" ng-click="aboutVpnClicked()" translate>About</a>
+                </div>
+            </div>
+            <div class="header__control header__close" ng-show="isWindowsClient" ng-class="{'header__controlHover': !headerDisabled}">
+                <a id="show-close" href="#" draggable="false" ng-click="closeClicked()">
+                    <i class="icon icon-close"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

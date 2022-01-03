@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="LauncherApp">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="UTF-8" />
+  <title>Avira Phantom VPN</title>
+  <script type="text/javascript">
+    if (typeof console === 'undefined') {
+      console = {
+        log: function () {}
+      };
+    }
+  </script>
+
+
+  <link rel="stylesheet" type="text/css" href="css/vpn-vendor-1.0.0.min.css">
+  <link rel="stylesheet" type="text/css" href="css/vpn-1.0.0.min.css">
+
+</head>
+
+<body ng-controller="VpnController" class="bodyFrame" ng-class="{
+	'vpn-pro': licenseType === 'Pro', 
+  'theme-dark': useDarkTheme,
+  'theme-light': useLightTheme,
+	'vpn-connecting': status === 'Connecting', 
+	'vpn-connected': status === 'Connected',
+	'is-insider' : insider === true,
+ 	'license-is-expiring': licenseType === 'Pro' && (appType === 'win' || appType === 'macDesktop') && subscriptionActivated === false && status === 'Disconnected' && daysUntilExpiration < 31,
+	'vpn-disconnecting': status === 'Disconnecting',
+	'vpn-disconnected': status === 'Disconnected',
+	'vpn-showRegisterOption': licenseType === 'Unregistered' && trafficLimitReached === true && !features.trial,
+  'vpn-trafficLimitReached': trafficLimitReached === true,
+  'uwp-app' : appType === 'uwp',
+  'win-app' : appType === 'win'
+}">
+
+  <div id="guiFrameContainerId" class="guiFrame unselectable" ng-show="currentView != 'keychainView' && showUI === true" 
+    data-current-view={{currentView}}
+    data-dark-theme={{useDarkTheme}}
+    data-light-theme={{useLightTheme}}>
+
+    <div header="" class="unselectable" ng-class="{'isSettingsView': currentView === 'settingsView'}"></div>
+
+    <div class="splash" ng-cloak="">
+      <img src="images/gif/loading.gif"></img>
+    </div>
+
+    <div ng-show="currentView == 'mainView'" class="unselectable main-view ng-cloak" ng-class="{'main-view__pro': useDarkTheme}">
+      <div class="unselectable" ng-class="{
+        'main': appType !== 'uwp',
+        'main-uwp': appType === 'uwp'
+      }">      
+        <div pulsar=""></div>
+        <div traffic=""></div>
+        <div location=""></div>
+        <div status=""></div>
+      </div>
+    </div>
+
+    <div ng-show="currentView == 'forcedLoginView'" class="unselectable main-view ng-cloak" ng-class="{'main-view__pro': useDarkTheme}">
+        <div class="unselectable" style="height:100%;">
+          <div forced_login=""></div>
+        </div>
+    </div>
+
+    <div ng-show="currentView == 'themeSelectionView'" class="unselectable theme-selection ng-cloak">
+        <div class="unselectable" style="height:100%;">
+          <div theme_selection=""></div>
+        </div>
+    </div>
+
+    <div ng-show="currentView == 'settingsView'" class="unselectable settings-view  ng-cloak">
+      <div class="settingsView-layout">
+        <div settings=""></div>
+        <div features=""></div>
+      </div>
+    </div>
+
+    <div ng-show="currentView == 'wifiView'" class="unselectable settings-view  ng-cloak">
+      <div settings=""></div>
+      <div wifi=""></div>
+    </div>
+
+    <div ng-show="currentView == 'regionsView'" class="unselectable settings-view  ng-cloak">
+      <div settings=""></div>
+      <div regions=""></div>
+    </div>
+
+    <div ng-show="currentView == 'trialView'" class="unselectable settings-view  ng-cloak">
+      <div trial=""></div>
+    </div>
+
+    <div ng-show="currentView == 'registerView'" class="unselectable settings-view  ng-cloak">
+      <div register=""></div>
+    </div>
+
+    <div ng-show="currentView == 'purchaseView'" class="unselectable settings-view  ng-cloak">
+      <div purchase=""></div>
+    </div>
+
+    <div ng-show="currentView == 'privacyView'" class="unselectable settings-view  ng-cloak">
+      <div privacy=""></div>
+    </div>
+
+    <div ng-show="currentView == 'diagnosticsView'" class="unselectable settings-view  ng-cloak">
+      <div diagnostics=""></div>
+    </div>
+
+    <div ng-show="currentView == 'emailConfirmationView'" class="unselectable settings-view  ng-cloak">
+      <div email_confirmation=""></div>
+    </div>
+
+    <div ng-show="currentView == 'waitingWindowView'" class="unselectable settings-view  ng-cloak">
+      <div waiting_window=""></div>
+    </div>
+
+    <div ng-show="currentView == 'startDiagnosticDataView'" class="unselectable settings-view  ng-cloak">
+      <div settings=""></div>
+      <div start_diagnostic_data=""></div>
+    </div>
+
+    <div ng-show="currentView == 'collectDiagnosticDataView'" class="unselectable settings-view  ng-cloak">
+      <div settings=""></div>
+      <div collect_diagnostic_data=""></div>
+    </div>
+
+    <div id="sentData" ng-show="currentView == 'sentDiagnosticDataView'" class="unselectable settings-view  ng-cloak">
+      <div settings=""></div>
+      <div sent_diagnostic_data=""></div>
+    </div>
+
+    <div ng-show="currentView == 'progressDiagnosticDataView'" class="settings-view  ng-cloak">
+      <div settings=""></div>
+      <div progress_diagnostic_data=""></div>
+    </div>
+
+    <div ng-show="currentView == 'confirmSentDataView'" class="settings-view  ng-cloak">
+      <div settings=""></div>
+      <div confirm_sent_data=""></div>
+    </div>
+
+    <div ng-show="currentView == 'displaySettingsView'" class="settings-view  ng-cloak">
+      <div settings=""></div>
+      <div display_settings=""></div>
+    </div>
+  
+
+    <script type="text/javascript" src="js/vpn-vendor-1.0.0.js"></script>
+    <script type="text/javascript" src="js/vpn-1.0.0.js"></script>
+
+    <rate rate-title-text="{{rateTitleText}}"
+            rate-description-text="{{rateDescriptionText}}"
+            rate-button-text="{{rateButtonText}}"
+            not-now-button-text="{{notNowButtonText}}"
+            selectable-stars="rateSelectableStars"
+            one-star-text="{{rateOneStarText}}"
+            two-stars-text="{{rateTwoStarsText}}"
+            three-stars-text="{{rateThreeStarsText}}"
+            four-stars-text="{{rateFourStarsText}}"
+            five-stars-text="{{rateFiveStarsText}}"
+            show-dont-show-again="rateShowDontShowAgain"
+            dont-show-again-text="{{rateDontShowAgainText}}"
+            dont-show-again-checked="rateDontShowAgainSelected"
+            align-buttons-horizontally="rateAlignButtonsHorizontally"
+            on-rate="onRateHandler"
+            on-not-now="onNotNowHandler()"
+            on-dont-show-again="onDontShowAgainHandler()"
+            show="showRateDialog">
+    </rate>
+    <div datausagepopup=""></div>
+  </div>
+  <div ng-show="currentView == 'keychainView'" class="guiFrame unselectable">
+    <div keychain=""></div>
+  </div>
+  <div regions_lock=""></div>
+</body>
+</html>

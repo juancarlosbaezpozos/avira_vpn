@@ -1,0 +1,24 @@
+<div class="pulsar clearfix">        
+    <img class="pulsar-background" draggable="false" src="images/png/pulsar-background.png"/>        
+    <div id="close" ng-show="infoRibbonVisible" class="info__control">
+        <div class="buttonclose" ng-click="closeButtonClicked()">
+            <i class="ionicons ion-close-round"/>
+        </div>
+        <div class="info__text">{{infoText}}</div>
+    </div>
+    <div class="pulsar__icon__big"></div>
+    <div class="pulsar__icon">
+        <div class="pulsar__icon_img" ng-click="pulsarImageClicked($event)"></div>
+    </div>
+    <div class="pulse_border"></div>
+    <div class="pulsing" ng-hide="stopPulsar">
+        <div class="pulsing__wave"></div>
+        <div class="pulsing__wave"></div>
+        <div class="pulsing__wave"></div>
+    </div>
+    <div class="trial_slider" ng-show="trial === true">
+        <div id="trialSlider" class="trial_slider__shape" ng-style="sliderStyle()" ng-class="{'trial_slider__shape_on' : trialSlideOn === true}" ng-click="trialSliderClicked()" ng-mouseleave="trialSliderFocusLost()">
+            <div class="trial_slider__text">{{trialText}}</div>
+       </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="status" class="vpn-status clearfix" data-license-type="{{licenseType}}" data-connect-status="{{status}}">
+	<div class="vpn-status__box">
+		<div id="ip-container" class="vpn-status__ip" ng-show="!trafficLimitReached && ipAddressFeature && !restrictedConnect">
+			<span translate>IP Address:</span>
+			<span id="ip" class="vpn-status__ip__color">{{ipAddress}}</span>
+		</div>
+		<div class="round-button connect-button">
+			<div class="round-button-circle connect-button-circle" ng-hide="isButtonHidden()">
+				<a id="toggle-connect" href="#" ng-click="buttonClicked()" draggable="false">{{connectButtonText}}</a>
+			</div>
+		</div>
+		<div class="register_message">
+			{{locationText}}
+			<a class="register_message__link" href="" id="registration" ng-click="registerAction()">{{infoLink}}</a>{{infoText}}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,65 @@
+<div class="diagnostic_data__start">
+    <div style="display: table;text-align:center;width:100%;line-height:25px;font-size:18px;"
+        ng-style="{'margin-top' : lastReportSent ? '52px' : '120px'}">
+        <div style="display:table-row;width:100%;">
+            <div style="display:table-cell;width:10%"></div>
+            <div class="diagnostic_data__start__description emphasized" 
+                style="display: table-cell; width:80%; max-width: 535px; height: 119px;">
+                <span translate>In case of technical issues you can collect diagnostic data and send a report to the developers.</span>
+            </div>
+            <div style="display:table-cell;width:10%"></div>
+        </div>
+        <div style="display:table-row;width:100%;" ng-show="lastReportSent">
+            <div style="display:table-cell;width:10%"></div>
+            <div class="diagnostic_data__start__lastReportTitle emphasized" style="display: table-cell;width:80%;max-width: 535px;">
+                <span class="emphasized" translate>Last report sent:</span>
+            </div>
+            <div style="display:table-cell;width:10%"></div>
+        </div>
+        <div style="display:table-row;width:100%;" ng-show="lastReportSent">
+                <div style="display:table-cell;width:10%"></div>
+                <div class="diagnostic_data__start__lastReportDate emphasized" style="display: table-cell;width:80%;max-width: 535px;padding-top:3px; padding-bottom: 5px;">
+                    {{lastReportDate}}
+                </div>
+                <div style="display:table-cell;width:10%"></div>
+        </div>
+        <div style="display:table-row;width:100%;" ng-show="lastReportSent">
+                <div style="display:table-cell;width:10%"></div>
+                <div class="emphasized" style="display: table-cell; width:80%; max-width: 535px; text-align: center;">
+                    <div class="{{showCopyButton ? 'diagnostic_data__referenceId' : 'diagnostic_data__referenceIdMarked'}}" style="width:45%; display: inline-block;">
+                        <span>REF:&nbsp</span>
+                        <span id="referenceNumber" class="all-copy" style="user-select:text">{{lastReportRef}}</span>
+                    </div>
+                </div>
+                <div style="display:table-cell;width:10%"></div>
+        </div>
+        <div style="display:table-row;width:100%;" ng-show="lastReportSent">
+                <div style="display:table-cell;width:10%"></div>
+                <div class="emphasized" style="display: table-cell; width:80%; max-width: 535px; text-align: center; padding-top: 5px; padding-bottom: 11px;" ng-show="showCopyButton">
+                    <a style="text-decoration: none" href="#" draggable="false" ng-click="copyButtonClicked()">
+                        <div class="diagnostic_data__referenceIdCopy" style="display: inline-block;">
+                            <img src="images/png/ref-copy.png" style="display: inline-block; padding-left: 5px; vertical-align: middle;"/>
+                            <span style="display: inline-block; padding-left: 3px; padding-right:5px;" translate>Copy</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="emphasized" style="display: table-cell; width:80%; max-width: 535px; text-align: center; padding-top: 5px;" ng-show="!showCopyButton">
+                    <div class="diagnostic_data__referenceIdCopied" style="display: inline-block;">
+                        <img src="images/png/ref-tick.png" style="display: block; margin: auto;"/>
+                        <span translate>Copied to clipboard</span>
+                    </div>
+                </div>
+                <div style="display:table-cell;width:10%"></div>
+        </div>
+        <div style="display:table-row;">
+            <div style="display:table-cell;width:10%"> </div>
+            <div style="display:table-cell;">
+                <div class="round-button diagnostic_data__start__sendButtonContainer" ng-style="{'padding-top' : lastReportSent ? '11px' : '75px'}">
+                    <div class="round-button-circle">
+                        <a href="#" ng-click="next()" draggable="false" translate>Send report</a>
+                    </div>
+                </div>
+            </div>
+            <div style="display:table-cell;width:10%"> </div>
+        </div>
+    </div>

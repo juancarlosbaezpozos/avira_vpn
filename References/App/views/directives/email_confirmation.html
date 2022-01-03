@@ -1,0 +1,50 @@
+<div class="settingsView-layout">
+    <div class="settings clearfix">
+        <div id="settings-left" class="settings__left">
+                <div class="settings__common clearfix" tabindex="1" no-mouse-outline ng-keydown="onKeyDown($event)">
+                    <div class="settings__setting-icon" ng-click="backButtonClicked()">
+                        <i class="ionicons ion-ios-arrow-back"></i>
+                    </div>
+                    <div id="settings-back" class="settings__setting-back" ng-click="backButtonClicked()">
+                        <div translate>Back</div>
+                    </div>
+                    <div class="vertical-line" />
+                </div>
+            </div>
+        <div class="settings__common settings__header clearfix">
+            <div translate>Email confirmation</div>
+        </div>
+        <div class="settings__header__fill">
+            <div id="settings-left" class="settings__left">
+                <div class="settings__common clearfix">
+                    <div class="settings__setting-icon">
+                        <i class="ionicons ion-ios-arrow-back"></i>
+                    </div>
+                    <div id="settings-back" class="settings__setting-back">
+                        <div translate>Back</div>
+                    </div>
+                    <div class="vertical-line" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="settingsView-layout__features">
+        <div class="emailConfirmation__middle">
+            <div class="emailConfirmation">
+                <div class="emailConfirmation__emailInfo">
+                    <div class="emailConfirmation__emailInfo__textBox">
+                        <div class="emailConfirmation__emailInfo__textField">{{registeredEmail}}</div>
+                    </div>
+                    <div class="emailConfirmation__emailButtons">
+                        <div class="emailConfirmation__emailButtons__emailSent" ng-show="isEmailResent" translate>Email sent</div>
+                        <div class="emailConfirmation__emailButtons__resendEmail" ng-click="resendEmail()" translate>Resend email</div>
+                    </div>
+                </div>
+                <div class= "emailConfirmation__description__container">
+                    <div class="emailConfirmation__description" translate>Check your inbox to confirm it's you. Make sure to look into your spam and junk folders as well.</div>
+                </div>
+                <div class="emailConfirmation__footer" ng-click="wrongEmail()" translate>I entered a wrong email</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+<div class="nano" style="min-height: 464px;">
+    <div class="nano-content">
+        <div class="puchasePage">
+            <div id="close" ng-show="displayError" class="info__control" style="text-align: center;">
+                <div class="buttonclose" ng-click="hideError()">
+                    <i class="ionicons ion-close-round" />
+                </div>
+                <div class="info__text">{{errorMessage}}</div>
+            </div>
+            <div class="purchase" style="height:37%;">
+                <div class="purchase__container">
+                    <div class="purchase__title" translate>Get Pro</div>
+                    <div class="purchase__offers">
+                        <div class="purchase__option" style="width: 45%; box-shadow: 15px 0px 0px -14px #D9D9D9;">
+                            <div ng-class="{purchase__option__leftbox : !isUWPClient, purchase__option__box : isUWPClient}">
+                                <div class="purchase__option__box__raw">
+                                    <div class="purchase__option__box__container">
+                                        <div style="display:inline-block;">
+                                            <img src="images/png/purchase/{{onlyMacImage}}.png" draggable="false" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="purchase__option__box__raw">
+                                    <div class="purchase__option__box__text" ng-class="{purchase__option__box__text__selected : onlyMacSelected}">{{platformSpecificOffer}}</div>
+                                </div>
+                                <div class="purchase__option__box__raw" ng-hide="isUWPClient">
+                                    <div class="purchase__option__box__container">
+                                        <div style="margin-top:5px; display:inline-block;">
+                                            <label class="radioContainer">
+                                                <input type="radio" name="offerRadio" checked="checked" value="1" id="onlyMacOfferId">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="purchase__registerFirst" ng-show="!isUWPClient && !userRegistered">
+                            <div class="purchase__registerFirst__box" translate>Please register if you want to purchase Phantom VPN Pro on all your devices</div>
+                        </div>
+                        <div class="purchase__option" ng-show="!isUWPClient && userRegistered" style="width: 55%;">
+                            <div class="purchase__option__box" style="float:left;max-width: 510px;">
+                                <div class="purchase__option__box__raw">
+                                    <div class="purchase__option__box__container">
+                                        <div style="display:inline-block;">
+                                            <img src="images/png/purchase/{{allDevicesImage}}.png" draggable="false" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="purchase__option__box__raw">
+                                    <div class="purchase__option__box__text" ng-class="{purchase__option__box__text__selected : !onlyMacSelected}" translate>On all my devices</div>
+                                </div>
+                                <div class="purchase__option__box__raw">
+                                    <div class="purchase__option__box__container">
+                                        <div style="margin-top:5px; display:inline-block;">
+                                            <label class="radioContainer">
+                                                <input type="radio" name="offerRadio" value="2" id="allDevicesOfferId">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase">
+                <div class="purchase__description__box">
+                    <div class="purchase__description" style="height: 40%;">
+                        <div class="purchase__description__box">
+                            <div class="purchase__description__text">{{offerDescription}}</div>
+                        </div>
+                    </div>
+                    <div class="purchase__description">
+                        <div class="purchase__description" style="height: 50%;">
+                            <div class="purchase__description__box">
+                                <div class="purchase__description__offer">
+                                    <div class="purchase__description__offer__box" style="margin-bottom: 10px">
+                                        <div class="purchase__description__offer__info">
+                                            <label class="radioContainer" ng-style="{float:'left'}">
+                                                <input type="radio" name="priceRadio" value="" ng-checked="isYearlyChecked" id="yearlyPriceId">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <div style="width: 190px; display: inline-block;">
+                                                <div class="purchase__description__offer__info__period" translate>Yearly:</div>
+                                                <div class="purchase__description__offer__info__price">{{yearlyOffer.price}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="purchase__description" style="height: 50%;">
+                            <div class="purchase__description__box">
+                                <div class="purchase__description__offer">
+                                    <div class="purchase__description__offer__box">
+                                        <div class="purchase__description__offer__info">
+                                            <label class="radioContainer" ng-style="{float:'left'}">
+                                                <input type="radio" name="priceRadio" value="" ng-checked="!isYearlyChecked" id="monthlyPriceId">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <div style="width: 190px; display: inline-block;">
+
+                                                <div class="purchase__description__offer__info__period purchase__description__offer__info__period__trial">
+                                                    <div bind-html-unsafe="monthlyOffer.text"></div>
+                                                </div>
+                                                <div class="purchase__description__offer__info__price" ng-hide="monthlyOffer.trial">{{monthlyOffer.price}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="purchaseButtons">
+                <div class="purchaseButtons__buyButton__box">
+                    <div class="purchaseButtons__buyButton">
+                        <div class="{{buttonStyle}}" ng-click="!buttonDisabled && buy()">{{buttonText}}</div>
+                    </div>
+                </div>
+                <div class="purchaseButtons__otherOptions">
+                    <div class="purchaseButtons__otherOptions__element">
+                        <div class="{{isUWPClient ? 'purchaseButtons__otherOptions__element__restore_hidden' : 'purchaseButtons__otherOptions__element__restore_default'}}"
+                            ng-click="!buttonDisabled && restore()" ng-style="buttonDisabled ? { cursor:'default', color:'#808b90'} : {}"
+                            translate>Restore purchase</div>
+                    </div>
+                    <div class="purchaseButtons__otherOptions__element">
+                        <div class="{{isUWPClient ? 'purchaseButtons__otherOptions__element__notNow_centered' : 'purchaseButtons__otherOptions__element__notNow_default'}}"
+                            ng-click="back()" translate>Not Now</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subscriptionTerms {{subscriptionTermsAdditionalStyle}}" ng-hide="isUWPClient">
+            <div class="subscriptionTerms__title" ng-click="subscriptionTerms()" translate>Subscription terms</div>
+            <div class="subscriptionTerms__description" translate>
+                    Length of subscription: 1 month/1 year<br/><br/> 
+                    Price of subscription: 4,95€ per month (Mac only) – 7,95€ per month (all devices) – 59,95€ per year (all devices).<br/><br/>
+                    
+                    Payment will be charged to iTunes Account at confirmation of purchase. Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period. Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal. Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase. Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable.
+            </div>
+            <div class="subscriptionTerms__button" ng-click="termsAndConditions()" translate>Terms and conditions</div>
+            <div class="subscriptionTerms__button" style="margin-bottom: 29px;" ng-click="privacyPolicy()" translate>Privacy policy</div>
+        </div>
+    </div>
+</div>
